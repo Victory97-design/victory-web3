@@ -1,0 +1,366 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                background-image: url("pngtree-inspired-couple-logo-illustrations-vector-png-image_15635585.png");
+                background-repeat: no-repeat;
+                background-size: 100vh; 
+                background-position: center top;
+                background-attachment: fixed;
+                background-color: #fcdce6; 
+            }
+            * {
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .brand-logo {
+                font-size: 2.5rem;
+                text-align: center;
+                padding-top:15px;
+            }
+            .header {
+                height:120px;
+                background-color: #ff4f81;
+                color:white;
+            }
+            .header-p{
+                text-align:center;
+                font-size: 16px;
+                font-weight: light;
+                padding-top:1px;
+            }
+            nav {
+                padding:20px 0;
+                text-align:center;
+            }
+            nav a {
+                text-decoration: none;
+                color:#ff4f81;
+                font-weight:bold;
+                margin:0 15px;
+                position:relative;
+            }
+            .nav-link:hover {
+                color:#ff4f81;
+                transition:1s;
+            }
+            .nav-link::after {
+                content :"";
+                position:absolute;
+                left:0;
+                bottom:-5px;
+                width:0%;
+                height:5px;
+                background-color: #ff4f81;
+                transition:width 0.3s ease;
+            }
+            .nav-link:hover::after {
+                width:100%;
+            }
+            .hero h1 {
+                text-align: center;
+                padding-top:60px;
+                font-size: 35px;
+            }
+            .hero {
+                min-height:250px;
+                background-color: #ffE4Ec;
+            }
+            p {
+                text-align: center;
+                padding-top:16px;
+
+            }
+            .hero button {
+                margin-top:20px;
+                padding:8px 16px;
+                border-radius:20px;
+                padding-bottom:8px;
+                font-size:1rem;
+                color:white;
+                background-color:#ff4f81 ;
+                border:none;
+                text-align: center;
+                display: block;
+                margin: 20px auto;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            .section {
+                min-height:300px;
+                background-color: #fcdce6;
+                padding:40px 30px;
+            }
+            .section h3 {
+                color:#ff4f81;
+                text-align: center;
+                font-size:30px;
+            }
+            .features {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap:30px;
+                margin-top:20px;
+            }
+            .features-box {
+                background-color: white;
+                border-radius: 10px;
+                padding:20px;
+                width:300px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                text-align: center;
+            }
+            .features-box:hover {
+                background-color:#ff4f81;
+                color:white;
+                transition: 0.3s ;
+                transform: translateY(-10px);
+            }
+            .hero2 {
+                min-height:300px;
+                background-color: #f3c7f3;
+                padding-top:40px;
+            }
+            .hero2 h2{
+                padding-top:10px;
+                font-size: 2.2rem;
+                padding-top:30px;
+                text-align: center;
+            }
+            .hero2 button {
+                margin-top:40px;
+                padding:8px 16px;
+                border-radius:20px;
+                padding-bottom:8px;
+                font-size:1.2rem;
+                color:white;
+                background-color:#ff4f81 ;
+                border:none;
+                text-align: center;
+                margin: 20px auto;
+                display: block;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            footer {
+                background-color: #ff4f81;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 0px;
+            }
+            @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero button,
+            .hero2 button {
+                display: block;
+                margin: 20px auto;
+            }
+
+            .section {
+                height: auto;
+                padding: 30px 15px;
+            }
+
+            .features-box {
+                width: 90%;
+            }
+            .brand-logo {
+                font-size: 1.5rem;
+            }
+
+            .header-p {
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                padding-top: 30px;
+            }
+
+            .hero2 h2 {
+                font-size: 1.5rem;
+            }
+        }
+            .contact {
+                background-color: #fcdce6;
+                padding-top: 10px;
+                padding-bottom:30px;
+                text-align: center;
+            }
+            .contact {
+                background-color: #fcdce6;
+                padding:10px 40px;
+                text-align:center;
+            }
+            .contact-heading1 {
+                margin-top:20px;
+                font-size:2.5rem;
+                color:#ff4f81;
+                margin-bottom:60px;
+            }
+            .contact-form{
+                max-width:500px;
+                display:flex;
+                margin:auto;
+                flex-direction: column;
+                gap:15px;
+            }
+            .contact-form input {
+                padding:12px;
+                border:1px solid #ccc;
+                border-radius:9px;
+                font-size:1rem;
+                resize:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            .contact-button {
+                border-radius:25px;
+                padding:12px;
+                background-color: #ff4f81;
+                color:white;
+                border:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                margin-bottom:40px;
+            }
+            .contact-form button:hover {
+                background-color: #e04070;
+                 transition :0.3s ease;
+            }
+            .contact-form textarea {
+                border-radius:25px;
+                padding:25px;
+                background-color: white;
+                color:black;
+                border:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                padding: 32px;
+                resize :vertical;
+            }
+            .logo-icon {
+                height: 50px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }   
+            .hero,
+            .section,
+            .hero2,
+            .contact {
+                background-color: rgba(252, 220, 230, 0.92);
+            }
+            hr {
+                height: 3px;          
+                background-color: #ff4f81; 
+                border: none;         
+            }
+            .hr-special {
+                height:1px;
+                background-color: #e04070;
+            }
+        </style>
+    </head>
+    <body>
+        <header class ="header">
+            <h1 class="brand-logo">
+                <img src = "pngtree-inspired-couple-logo-illustrations-vector-png-image_15635585.png" class = "logo-icon">
+                Surfer
+            </h1>
+            <p class="header-p">Find Real Conection, Not Just Matches </p>
+        </header>
+        <nav>
+            <a href = "#home" class = "nav-link">Home</a>
+            <a href = "#join" class = "nav-link">Join Now</a>
+            <a href = "#" class = "nav-link">Browse</a>
+            <a href = "#about" class = "nav-link">About</a>
+            <a href = "#contact" class = "nav-link">Contact</a>
+        </nav>
+        <div class="hero">
+            <h1>Your Love Story Begins Here ❤️</h1>
+            <p>Joins Thousands Of Singles Looking For Love and Meaningful Relationships to spend life with one another.</p>
+            <button>Sign Up for Free</button>
+            <br>
+            <br>
+            <hr>
+            </div>
+
+        <div class="section" id = "about">
+            <h3>Why Choose Surfer! 🤔</h3>
+            <div class="features" id = "about">
+                <div class="features-box">
+                    <h4>Smart Matches 👍</h4>
+                    <p>We connect you with people who truly match your values and interests.</p>
+                </div>
+                <div class="features-box">
+                    <h4>Safe & Secure 🛡️</h4>
+                    <p>Your privacy matters. We protect your data with strong security.</p>
+                </div>
+                <div class="features-box">
+                    <h4>Real People 🫂</h4>
+                    <p>Every profile is reviewed to ensure a real and safe dating experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>How It Works 📱</h3>
+            <div class="features">
+                <div class="features-box">
+                    <h4>1. Create Profile 🤳</h4>
+                    <p>Tell us about yourself. It’s quick and easy.</p>
+                </div>
+                <div class="features-box">
+                    <h4>2. Meet Matches 🤝</h4>
+                    <p>We’ll recommend people just for you.</p>
+                </div>
+                <div class="features-box">
+                    <h4>3. Start Chatting 🗣️</h4>
+                    <p>Connect through private, real-time messaging.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <hr>
+        <div class="hero2">
+            <h2>Ready To Find Love? 🫷🫸</h2>
+            <p>Create your profile today and start connecting with amazing people near you.</p>
+            <button>Join Now</button>
+        </div>
+        <hr class = "hr-special">
+        <br>
+        <hr class ="hr-special">
+        <div class="contact">
+
+        </div>
+
+        <div class="contact" id="contact">
+            <h2 class="contact-heading1">Contact 📪</h2    >
+            <form class="contact-form">
+                <input type="text" placeholder = "Your First Name..." required>
+                <input type="text" placeholder = "Your Last Name..." required>
+                <textarea row ="row" placeholder = "Your Message"></textarea>
+                <button class = "contact-button">Send</button>
+            </form>
+        </div>
+        <footer>
+            &copy; 2025 Surfer | All Rights Reserved | Privacy Policy | Terms of Use
+            &copy;
+        </footer>
+    </body>
+    </html>
